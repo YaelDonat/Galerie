@@ -7,6 +7,7 @@ import { GalerieComponent } from './pages/galerie/galerie.component';
 
 const routes: Routes = [
 
+  { path :'', component :HomeComponent},
   { path: 'home', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'galerie', component: GalerieComponent },

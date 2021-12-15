@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-photo-du-jour',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotoDuJourComponent implements OnInit {
 
+  marsPhotos = [{ id: "1", img_src: "https://mars.nasa.gov/system/resources/detail_files/26372_1-PIA24937-web.jpg" },
+                { id: "2", img_src: "https://mars.nasa.gov/system/resources/detail_files/26372_1-PIA24937-web.jpg" },
+                {id:"3", img_src:"https://mars.nasa.gov/system/resources/detail_files/26372_1-PIA24937-web.jpg"}]
+
   constructor() { }
 
   ngOnInit(): void {
+   // console.log(this.marsPhotos)
   }
+
 
 }
