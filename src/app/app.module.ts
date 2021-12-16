@@ -12,6 +12,7 @@ import { PhotoDuJourComponent } from './pages/photo-du-jour/photo-du-jour.compon
 import { FormsModule } from '@angular/forms';
 import { ListImagesComponent } from './features/list-images/list-images.component';
 import { ListImagesItemComponent } from './features/list-images-item/list-images-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ListImagesItemComponent } from './features/list-images-item/list-images
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

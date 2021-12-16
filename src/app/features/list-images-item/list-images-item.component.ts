@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+interface ItemMarsPhoto {
+  id: string;
+  img_src: string;
+};
 
 @Component({
   selector: 'app-list-images-item',
@@ -6,6 +11,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-images-item.component.css']
 })
 export class ListImagesItemComponent implements OnInit {
+
+  @Input() photosMars: any = [];
 
   constructor() { }
 

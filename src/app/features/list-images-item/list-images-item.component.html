@@ -1,1 +1,18 @@
-<p>list-images-item works!</p>
+<div class="flew flex-col justify-between min-h-screen">
+
+    <app-navbar></app-navbar>
+
+    <main class="mt-10 grow">
+
+        <img class="img" src="{{ photosMars.img_src }}" alt="" />
+
+
+        <router-outlet></router-outlet>
+
+    </main>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+
+</div>

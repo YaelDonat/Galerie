@@ -1,4 +1,4 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 interface IMarsPhoto {
   id: string;
@@ -12,7 +12,10 @@ interface IMarsPhoto {
 })
 export class ListImagesComponent implements OnInit {
 
-  @Input() marsPhotos: IMarsPhoto[] = [];
+  @Input() marsPhotos = [];
+  @Input() anneePhotos = "";
+  @Input() moisPhotos = "";
+  @Input() jourPhotos = "";
 
   constructor() { }
 
