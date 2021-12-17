@@ -3,7 +3,54 @@
   <app-navbar></app-navbar>
 
   <main class="mt-10 grow">
+    <!-- FORM -->
 
+    <div class="font-sans">
+      <div class="relative min-h-screen flex flex-col sm:justify-center items-center bg-transparent ">
+          <div class="relative sm:max-w-sm w-full">
+              <div class="card bg-mars-400 shadow-lg  w-full h-full rounded-3xl absolute  transform -rotate-6"></div>
+              <div class="card bg-red-400 shadow-lg  w-full h-full rounded-3xl absolute  transform rotate-6"></div>
+              <div class="relative w-full rounded-3xl  px-6 py-4 bg-gray-100 shadow-md">
+                  <label for="" class="block mt-3 text-sm text-gray-700 text-center font-semibold">
+                      Photo de Mars du :
+                  </label>
+                  <form method="#" action="#" class="mt-10">
+
+                      <div>
+                          <input type="number" placeholder="Jour" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-mars-100 focus:bg-mars-100 focus:ring-0" name="jour" [(ngModel)]="jour">
+                      </div>
+
+                      <div class="mt-7">
+                          <input type="number" placeholder="Mois" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-mars-100 focus:bg-mars-100 focus:ring-0" name="mois" [(ngModel)]="mois">
+                      </div>
+
+                      <div class="mt-7">
+                          <input type="number" placeholder="Année" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-mars-100 focus:bg-mars-100 focus:ring-0" name="annee" [(ngModel)]="annee">
+                      </div>
+
+                      <div class="flex mt-7 justify-center w-full">
+                          <button type="submit" (click)="choixDate()" class="mr-5 bg-green-500 border-none px-4 py-2 rounded-xl cursor-pointer text-white shadow-xl hover:shadow-inner transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105">
+
+                              Valider
+                          </button>
+
+                          <button type="reset" class="bg-red-500 border-none px-4 py-2 rounded-xl cursor-pointer text-white shadow-xl hover:shadow-inner transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105">
+
+                              Reset
+                          </button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <!-- FORM close-->
+    <!-- Affichage-->
+
+  <div class="grid grid-col-2 grid-flow-col place-items-center">
+    <app-list-images [marsPhotos]="marsPhotos"></app-list-images>
+  </div>
 
     <router-outlet></router-outlet>
 

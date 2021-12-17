@@ -9,16 +9,28 @@ import { MarsImagesService } from 'src/app/services/mars-images.service';
 })
 export class PhotoDuJourComponent implements OnInit {
 
-  /*marsPhotos = [{ id: "1", img_src: "https://mars.nasa.gov/system/resources/detail_files/26372_1-PIA24937-web.jpg" },
-                { id: "2", img_src: "https://mars.nasa.gov/system/resources/detail_files/26372_1-PIA24937-web.jpg" },
-                {id:"3", img_src:"https://mars.nasa.gov/system/resources/detail_files/26372_1-PIA24937-web.jpg"}]*/
-
   constructor(private MarsImagesService: MarsImagesService) {
     this.MarsImagesService = MarsImagesService;
   }
-
+  annee: any;
+  mois: any;
+  jour: any;
   marsPhotos = [];
+
+  choixDate() {
+    this.MarsImagesService.dateChange(this.jour, this.mois, this.annee);
+    this.MarsImagesService.getMarsImagesFromAPI().subscribe(
+      (res) => {
+        this.marsPhotos = res.photos;
+        console.log(res.photos);
+      },
+    );
+  }
+
   ngOnInit(): void {
+
+
+
     this.MarsImagesService.getMarsImagesFromAPI().subscribe(
       (res) => {
         this.marsPhotos = res.photos;

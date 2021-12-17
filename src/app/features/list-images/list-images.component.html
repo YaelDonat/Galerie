@@ -1,23 +1,10 @@
-<div class="x flex-col justify-between min-h-screen overflow-hidden">
 
-    <app-navbar></app-navbar>
-
-    <main class="mt-10 grow">
-
-
-        <ng-container *ngIf="marsPhotos.length > 0">
-            <li class="container" *ngFor="let photosMars of marsPhotos">
-                <app-list-images-item [photosMars]="photosMars"></app-list-images-item>
-            </li>
+        <ng-container *ngIf="marsPhotos.length > 0" >
+            <div *ngFor="let photosMars of marsPhotos">
+                <app-list-images-item class="grid grid-col-2 grid-flow-col place-items-center" [photosMars]="photosMars"></app-list-images-item>
+            </div>
         </ng-container>
 
 
-        <router-outlet></router-outlet>
 
-    </main>
 
-    <footer>
-        <app-footer></app-footer>
-    </footer>
-
-</div>
